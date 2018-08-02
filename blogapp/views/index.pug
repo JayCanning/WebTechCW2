@@ -1,0 +1,37 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}	
+	
+	button(type='button' onclick='UserAction()') New Note
+	script.
+		function UserAction() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+		alert(this.responseText);
+		}
+		};
+		
+		xhttp.open('POST', 'http://localhost:3000/notes', true);
+		xhttp.setRequestHeader('Content-type', 'application/json');
+		
+		var obj = {};
+		obj['title'] = 'title';
+		obj['content'] = 'content';
+		
+		data= JSON.stringify(obj);
+		xhttp.send(data);
+		}
+	
+	button(type='button' onclick='') View Note
+	
+	button(type='button' onclick='') Update Note
+	button(type='button' onclick='') Delete Note
+	
+	.textArea(id='myContent' style='height:400px;')
+		h2 TITLE
+		p Text text text 
+	
+	

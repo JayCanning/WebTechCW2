@@ -1,0 +1,20 @@
+{
+  "name": "blogapp",
+  "version": "1.0.0",
+  "description": "Blog app for WebTech CW",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JC",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.6",
+    "morgan": "^1.9.0",
+    "pug": "^2.0.3",
+    "request": "^2.87.0"
+  }
+}
